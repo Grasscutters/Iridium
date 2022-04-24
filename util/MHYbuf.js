@@ -72,7 +72,7 @@ module.exports = {
 				return protoName;
 			}
 
-			const root = await protobuf.load("./data/proto/" + protoName + ".proto");
+			const root = await protobuf.load(`./data/proto/${protoName}.proto`);
 			const testMessage = root.lookup(protoName);
 			const message = testMessage.create(obj);
 			return testMessage.encode(message).finish();
@@ -91,7 +91,7 @@ module.exports = {
 				return protoName;
 			}
 
-			const root = await protobuf.load("./data/proto/" + protoName + ".proto");
+			const root = await protobuf.load(`./data/proto/${protoName}.proto`);
 			const testMessage = root.lookup(protoName);
 			const message = testMessage.decode(moreSliced);
 			return message;

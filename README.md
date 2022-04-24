@@ -1,12 +1,9 @@
 # Iridium
 A KCP packet sniffer + visualizer in one.
 
-**No, pancake fiddler doesn't work anymore.**
-
-
 # Usage
 
-0. Bring your `packetIds.json` and `proto/` to the `data/` folder.
+0. Bring `GenshinData` from Grasscutter's resource folder.
 
 ½. `npm i`
 
@@ -16,6 +13,16 @@ A KCP packet sniffer + visualizer in one.
 
 From there, you can either start a proxy or read a .pcap file filtered with `udp.port == 22101 or udp.port == 22102`.
 Proxy captures will be saved to `captures` folder in a .gcap format and can also be read with this tool.
+
+
+# Using with Grasscutter on Localhost
+
+0. Set Grasscutter's GameServer port to an available port and set `PublicPort` to 22102.
+
+1. Open config.js and set `useDispatchServer` to false, `UdpTargetIP` to `127.0.0.1` and `UdpTargetPort` to the port that you specified.
+
+2. Start Iridium and enable UDP Proxy from Frontend, then you can start Grasscutter.
+
 
 # Node module API for your own packets
 

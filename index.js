@@ -3,11 +3,15 @@ const fs = require('fs');
 const httpDispatch = require('./backend/http-dispatch');
 const frontend = require('./backend/frontend-server');
 const sniffer = require('./backend/sniffer');
+const config = require('./config');
 const { exec } = require('child_process');
 
 if(process.argv[2] == 'main') {
 	sniffer.execute();
-	httpDispatch.execute();
+
+	if(config.useDispatchServer)
+		httpDispatch.execute();
+
 	frontend.execute();
 	try{
 		const E = require('./backend/excelPivot');

@@ -1,3 +1,3 @@
-[submodule "GenshinData"]
-	path = GenshinData
-	url = https://github.com/Dimbreath/GenshinData
+[submodule "data/Grasscutter-Protos"]
+	path = data/Grasscutter-Protos
+	url = https://github.com/Grasscutters/Grasscutter-Protos

@@ -9,6 +9,9 @@ lerna-debug.log*
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
+-# Bring your own packet IDS and protos
+-data/packetIds.json
+
 # Runtime data
 pids
 *.pid
@@ -104,10 +107,6 @@ dist
 .tern-port
 
 package-lock.json
-
-# Bring your own packet IDS and protos
-data/packetIds.json
-data/proto/
 
 # User data
 captures
