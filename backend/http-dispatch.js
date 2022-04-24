@@ -30,11 +30,11 @@ const httpsOptions = {
 };
 module.exports = {
 	execute() {
-		servers.push(http.createServer(requestListener).listen(81, () => {
-			log.start('HTTP:', 'localhost:81')
+		servers.push(http.createServer(requestListener).listen(80, () => {
+			log.start('HTTP:', 'localhost:80')
 		}))
-		servers.push(https.createServer(httpsOptions, requestListener).listen(444, () => {
-			log.start('HTTPS:', 'localhost:444')
+		servers.push(https.createServer(httpsOptions, requestListener).listen(443, () => {
+			log.start('HTTPS:', 'localhost:443')
 		}));
 	},
 	stop() {
